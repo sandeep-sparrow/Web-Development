@@ -1,0 +1,44 @@
+/***************************************** TAG SELECTOR **********************************************************************/
+
+body{
+  background-color: #EAF6F6;
+}
+h1{
+  color: Blue;
+}
+P{
+  font-size: 20px;
+  color: Red;
+}
+img:hover{
+  background-color: gold;
+}
+/***************************************** CLASS SELECTOR ********************************************************************/
+
+.Bacon{
+  background-color: red;
+  height: 125px; width: 125px;
+}
+
+.Apple{
+  background-color: green;
+  height: 125px; width: 125px;
+}
+
+.circle{
+  border-radius: 100%
+}
+
+/***************************************** ID SELECTOR **********************************************************************/
+
+#Heading{
+  color: red;
+}
+
+#row1{
+  color: Grey;
+}
+
+#row2{
+  color: black;
+}
