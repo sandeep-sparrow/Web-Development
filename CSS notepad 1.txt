@@ -1,0 +1,7 @@
+      /* SPAN element is called a inline element */
+      /* some of Common inline Element - Anchor tag, IMG, Span */
+      /* P, H1, Div tag are block element which are able to adjust height and width */
+      /* Display tag can hel to change tha inline to block and vise versa */
+      /* Display: inline-both, best of both */
+      /* Display: None, get rid of element */
+      /* Visibility: hidden */
