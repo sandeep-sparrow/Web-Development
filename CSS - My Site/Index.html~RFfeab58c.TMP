@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Sandeep Prajapati</title>
+  <link rel="stylesheet" href="CSS/Styles.css">
+  <link rel="icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Sacramento&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="top-container">
+    <img class="top-cloud" src="Images/cloud.png" alt="">
+    <h1>I'm Sandeep.</h1>
+    <h2>a Programmer.</h2>
+    <img class="bottom-cloud" src="Images/cloud.png" alt="">
+    <img src="Images/mountain.png" alt="">
+  </div>
+  <div class="middle-container">
+    <div class="profile">
+      <img class="profile-image" src="Images/sandeep.png" alt="">
+      <h2>Hello.</h2>
+      <p>I am Z/OS Developer, I'm the founder and CEO of SandyRigEverything, I love Coffee and brew my own Beer</p>
+    </div>
+    <hr>
+    <div class="skills">
+      <h2>My Skills.</h2>
+      <div class="skill-row">
+        <img class="skill-image" src="Images/computer.png" alt="">
+        <h3>Design & Development</h3>
+        <p>I started learning code when i was 16years old because i wanted to make my own video game. i have gained a wealth of experiance designing and developning Z/OS & Web Application</p>
+      </div>
+      <div class="skill-row">
+        <img class="beer-image" src="Images/Beer.png" alt="">
+        <h3>Beer Tower Challenge</h3>
+        <p>But my skill is actually drinking a tower of beer. I am undisputed king of tower challenge. Gost snackers are my favourite snack.</p>
+      </div>
+    </div>
+    <hr>
+    <div class="contact-me">
+      <h2>Get In Touch</h2>
+      <h3>if you love beer as much as i do.</h3>
+      <p class="contact-para-desc">love beer as much as i do? Let's talk about how awesome it is! We can code while we drink beer!</p>
+      <a class="btn" href="mailto:sandeep.p4856@live.com">CONTACT ME</a>
+    </div>
+  </div>
+
+
+  <div class="bottom-container">
+    <a class="footer-link" href="https://www.linkedin.com/in/sandeep-prajapati-ab574b8a/"><strong>LinkedIn</strong></a>
+    <a class="footer-link" href="https://twitter.com/Sandeep_p555"><strong>Twitter</strong></a>
+    <a class="footer-link" href="https://www.appbrewery.co/"><strong>Website</strong></a>
+    <p class="copy-write">© 2018 Sandeep Prajapati.</p>
+  </div>
+
+</body>
+
+</html>
