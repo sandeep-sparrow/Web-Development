@@ -1,13 +1,62 @@
+
+/* tindog CSS file*/
+
+/*---------------------------------------------- ID Selector -----------------------------------------------------------------*/
+
 #title {
   background-color: #FF4C68;
+}
+
+/*---------------------------------------------- TAG Selector ----------------------------------------------------------------*/
+
+body {
+
 }
 
 h1 {
   font-family: "Montserrat";
   font-size: 3rem;
   line-height: 1.5;
+  color: white;
 }
 
+/*---------------------------------------------- CLASS Selector --------------------------------------------------------------*/
 .container-fluid{
     padding: 3% 15%;
 }
+
+
+/*----------------Navigation bar-----------------------------*/
+
+.navbar{
+    padding: 0 0 4.5rem;
+}
+
+.navbar-brand {
+    font-size: 2.5rem;
+    font-family: "Ubuntu";
+    font-weight: bold;
+}
+
+.nav-item{
+    padding: 0 18px;
+
+}
+
+.nav-link {
+    font-family: "Montserrat";
+    font-size: 1.2rem;
+}
+
+ /*----------------Download buttom--------------------------*/
+
+.download-button {
+    margin: 5% 3% 5% 0%;
+}
+
+ /*-----------------Title Image-----------------------------*/
+
+ .title-image{
+     width: 70%;
+     transform: rotate(25deg);
+ }
