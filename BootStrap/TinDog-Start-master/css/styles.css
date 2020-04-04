@@ -7,15 +7,11 @@
   background-color: #FF4C68;
 }
 
-#features{
+#features {
   text-align: center;
 }
 
 /*---------------------------------------------- TAG Selector ----------------------------------------------------------------*/
-
-body {
-
-}
 
 h1 {
   font-family: "Montserrat";
@@ -24,35 +20,40 @@ h1 {
   color: white;
 }
 
+h2 {
+  font-family: "Montserrat";
+  font-size: 2.5rem;
+  line-height: 1.5;
+}
+
 h3 {
   font-family: "Montserrat";
-
 }
 
 p {
   color: #8F8F8F;
 }
+
 /*---------------------------------------------- CLASS Selector --------------------------------------------------------------*/
-.container-fluid{
+
+.container-fluid {
     padding: 3% 15%;
 }
 
-
 /*----------------Navigation bar-----------------------------*/
 
-.navbar{
+.navbar {
     padding: 0 0 4.5rem;
 }
 
 .navbar-brand {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-family: "Ubuntu";
     font-weight: bold;
 }
 
-.nav-item{
+.nav-item {
     padding: 0 18px;
-
 }
 
 .nav-link {
@@ -68,16 +69,19 @@ p {
 
  /*-----------------Title Image-----------------------------*/
 
- .title-image{
-     width: 70%;
+ .title-image {
+     width: 60%;
      transform: rotate(25deg);
  }
 
- #features{
+
+ /* Features Section */
+
+ #features {
    padding: 7%, 15%;
  }
 
- .feature-box{
+ .feature-box {
    text-align: center;
    padding: 5%;
  }
@@ -87,6 +91,35 @@ p {
    margin-bottom: 1rem;
  }
 
- .icon:hover{
+ .icon:hover {
    color: #FF4C68;
  }
+
+/* testimonials Sections */
+
+#testimonials {
+  padding: 7%, 15%;
+  text-align: center;
+  background-color: #EF8172;
+  color: #FFFF;
+}
+
+.testimonials-image {
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+/* Press Section */
+
+#press {
+    padding: 7%, 15%;
+    text-align: center;
+    background-color: #EF8172;
+    padding-bottom: 3%;
+}
+
+.press-logo {
+  margin: 20px 20px 50px;
+  width: 15%;
+}
