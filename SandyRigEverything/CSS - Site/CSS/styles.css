@@ -67,9 +67,9 @@ p {
 
 .title-image {
     padding-top: 1rem;
-    position: relative;
+    position: absolute;
     left: 30px;
-    width: 90%;
+    width: 100%;
 }
 
 #features {
