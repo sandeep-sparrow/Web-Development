@@ -9,6 +9,9 @@
 
 #features {
   text-align: center;
+  background-color: white;
+  position: relative;
+  z-index: 1;
 }
 
 /*---------------------------------------------- TAG Selector ----------------------------------------------------------------*/
@@ -72,6 +75,7 @@ p {
  .title-image {
      width: 60%;
      transform: rotate(25deg);
+     position: absolute;
  }
 
 
