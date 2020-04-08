@@ -1,35 +1,10 @@
 
-/* tindog CSS file*/
-
-/*---------------------------------------------- ID Selector -----------------------------------------------------------------*/
-
-#title {
-  background-color: #FF4C68;
-}
-
-#features {
+Body {
+  font-family: "Montserrat";
   text-align: center;
-  background-color: white;
-  position: relative;
-  z-index: 1;
 }
 
-/*---------------------------------------------- TAG Selector ----------------------------------------------------------------*/
-
-h1 {
-  font-family: "Montserrat";
-  font-size: 3rem;
-  line-height: 1.5;
-  color: white;
-}
-
-h2 {
-  font-family: "Montserrat";
-  font-size: 2.5rem;
-  line-height: 1.5;
-}
-
-h3 {
+h1, h2, h3 {
   font-family: "Montserrat";
 }
 
@@ -37,16 +12,50 @@ p {
   color: #8F8F8F;
 }
 
-/*---------------------------------------------- CLASS Selector --------------------------------------------------------------*/
-
-.container-fluid {
-    padding: 3% 15% 3%;
+em {
+  font-family: "Ubuntu";
 }
 
-/*----------------Navigation bar-----------------------------*/
+/* Container Padding  */
+
+.container-fluid {
+  padding: 7% 15%;
+}
+
+/* Title section */
+
+#title {
+  background-color: #FF4C68;
+}
+
+.title-heading {
+  font-family: "Montserrat";
+  font-size: 3rem;
+  line-height: 1.5;
+  color: white;
+  text-align: left;
+}
+
+.title-button {
+  text-align: left;
+}
+
+ .title-image {
+     width: 60%;
+     transform: rotate(25deg);
+     position: absolute;
+     right: 30%;
+ }
+
+ .title-container {
+     padding: 3% 15% 3%;
+ }
+
+
+/* Navigation bar */
 
 .navbar {
-    padding: 0 0 4.5rem;
+    padding: 0 0 4rem;
 }
 
 .navbar-brand {
@@ -60,30 +69,27 @@ p {
 }
 
 .nav-link {
-    font-family: "Montserrat";
-    font-size: 1.2rem;
+    font-family: "Ubuntu";
+    font-size: 1.0rem;
+    text-align: right;
 }
-
- /*----------------Download buttom--------------------------*/
 
 .download-button {
     margin: 5% 3% 5% 0%;
+    font-family: Ubuntu;
 }
 
- /*-----------------Title Image-----------------------------*/
-
- .title-image {
-     width: 60%;
-     transform: rotate(25deg);
-     position: absolute;
-     right: 30%;
- }
-
-
- /* Features Section */
+ /* Feature Section */
 
  #features {
-   padding: 3%, 15%;
+   background-color: white;
+   position: relative;
+   z-index: 1;
+ }
+
+ .feature-text {
+   font-size: 2.0rem;
+   line-height: 1.5;
  }
 
  .feature-box {
@@ -100,29 +106,29 @@ p {
    color: #FF4C68;
  }
 
-/* testimonials Sections */
+/* Testimonials Section */
 
-#testimonials {
-  text-align: center;
+#testimonial {
   background-color: #EF8172;
   color: #FFFF;
 }
 
-.testimonials-image {
+.testimonial-text {
+    font-size: 2.5rem;
+    line-height: 1.5;
+}
+
+.testimonial-image {
   width: 10%;
   border-radius: 100%;
   margin: 20px;
 }
 
-.carousel-item {
-  padding: 7% 15%;
-}
+
 
 /* Press Section */
 
 #press {
-    padding: 7%, 15%;
-    text-align: center;
     background-color: #EF8172;
     padding-bottom: 3%;
 }
@@ -132,42 +138,41 @@ p {
   width: 15%;
 }
 
-/* pricing section */
+/* Pricing section */
 
 #pricing {
   padding: 100px;
-  text-align: center;
 }
 
 .pricing-column {
     padding: 3% 2%;
 }
 
+.signup-button {
+  font-family: Ubuntu;
+}
+
 /* Call for Action */
 
 #cta {
   background-color: #FF4C68;
-  text-align: center;
 }
 
-.h-cta {
-  color: #FFF;
-  font-size: 2.5rem;
+.cta-heading {
+  font-family: Montserrat;
+  font-size: 3rem;
   line-height: 1.5;
-}
+  color: white;
 
-.cta-container {
-  padding: 5% 25% 5%;
 }
 
 /* Footer section */
 
-#footer {
-  text-align: center;
-  padding: 5% 15% 3%;
-}
-
 .f-icon {
   margin: 20px 10px;
   color: black;
+}
+
+.copywrite-text {
+  font-family: monospace;
 }
