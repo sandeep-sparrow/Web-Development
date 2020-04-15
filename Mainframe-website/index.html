@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My Mainframe WebSite!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Merriweather&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/styles.CSS">
+  </head>
+  <body>
+    <h2>COBOL program reads 3 input file</h2>
+    <h3>This Progrma calculates bank account balance and writes in OUTFIL</h3>
+
+      <p>******************************************************************</p>
+      <p>* Author: sandeep                                                 </p>
+      <p>* Date:   13-04-2020                                              </p>
+      <p>* Purpose:                                                        </p>
+      <p>* Tectonics: COBOL                                                </p>
+      <p>******************************************************************</p>
+      <p> DENTIFICATION DIVISION.                                          </p>
+      <p> PROGRAM-ID. MYBANK.                                              </p>
+      <p> AUTHOR. SANDEEP.                                                 </p>
+      <p>*----------------------------------------------------------------*</p>
+      <p> ENVIRONMENT DIVISION.                                            </p>
+      <p> INPUT-OUTPUT SECTION.                                            </p>
+      <p> FILE-CONTROL.                                                    </p>
+      <p> SELECT BALANCE-AMT ASSIGN TO BALANCE                             </p>
+      <p> ORGANIZATION IS SEQUENTIAL.                                      </p>
+      <p> SELECT DEPOSIT-AMT ASSIGN TO DEPOSIT                             </p>
+      <p> SELECT DEPOSIT-AMT ASSIGN TO DEPOSIT                             </p>
+      <p>            ORGANIZATION IS SEQUENTIAL.                           </p>
+      <p> SELECT WITHDRW-AMT ASSIGN TO WITHDRW                             </p>
+      <p>            ORGANIZATION IS SEQUENTIAL.                           </p>
+      <p> SELECT OUTPUT-AMT ASSIGN TO OUTFILE                              </p>
+      <p>            FILE STATUS IS WS-STATUS.                             </p>
+      <p>*----------------------------------------------------------------*</p>
+      <p> DATA DIVISION.                                                   </p>
+      <p> FILE SECTION.                                                    </p>
+      <p>*----------------------------------------------------------------*</p>
+      <p> FD BALANCE-AMT                                                   </p>
+      <p> RECORD CONTAINS 80 CHARACTERS                                    </p>
+      <p>  RECORDING MODE IS F.                                            </p>
+      <p> 01 BALANCE-IO.                                                   </p>
+      <p>  02  BAL-AMT         PIC 9999999.99.                             </p>
+      <p>  02  FILLER          PIC X(70).                                  </p>
+      <p>*----------------------------------------------------------------*</p>
+      <p> FD DEPOSIT-AMT                                                   </p>
+      <p> RECORD CONTAINS 80 CHARACTERS                                    </p>
+      <p>  RECORDING MODE IS F.                                            </p>
+      <p> 01 DEPOSIT-I.                                                    </p>
+      <p>  02  DEP-AMT         PIC 9999999.99.                             </p>
+      <p>  02  FILLER          PIC X(70).                                  </p>
+      <p>*----------------------------------------------------------------*</p>
+       FD WITHDRW-AMT
+           RECORD CONTAINS 80 CHARACTERS
+           RECORDING MODE IS F.
+       01 WITHDRW-I.
+           02  DRAW-AMT        PIC 9999999.99.
+           02  FILLER          PIC X(70).
+      <p>*----------------------------------------------------------------*</p>
+       FD OUTPUT-AMT
+           RECORD CONTAINS 80 CHARACTERS
+           RECORDING MODE IS F.
+       01 OUTFILE-O.
+           02  FINAL-AMT       PIC 9999999.99.
+           02  FILLER          PIC X(70).
+      <p>*----------------------------------------------------------------*</p>
+       WORKING-STORAGE SECTION.
+       01 WS-NEWBAL            PIC 9(10).
+       01 WS-BAL-AMT           PIC 9999999.99.
+       01 WS-BAL               PIC 9(10).
+       01 WS-DEP               PIC 9(10).
+       01 WS-DRAW              PIC 9(10).
+       01 WS-STATUS            PIC X(02).
+      <p>*----------------------------------------------------------------*</p>
+       PROCEDURE DIVISION.
+      <p>*----------------------------------------------------------------*</p>
+      <p>  INITIALIZE WS-NEWBAL,                                           </p>
+      <p>             WS-BAL,                                              </p>
+      <p>             WS-DEP,                                              </p>
+      <p>             WS-DRAW.                                             </p>
+      <p>*----------------------------------------------------------------*</p>
+           OPEN-FILES.
+           READ-FILES.
+           COMPUTE-FILES.
+           WRITE-FILES.
+           CLOSE-FILES.
+      <p>*----------------------------------------------------------------*</p>
+           STOP RUN.
+      <p>*----------------------------------------------------------------*</p>
+           OPEN-FILES.
+           OPEN INPUT  BALANCE-AMT.
+           OPEN INPUT  DEPOSIT-AMT.
+           OPEN INPUT  WITHDRW-AMT.
+           OPEN OUTPUT OUTPUT-AMT.
+      <p>*----------------------------------------------------------------*</p>
+           READ-FILES.
+      <p>*----------------------------------------------------------------*</p>
+           READ BALANCE-AMT.
+           READ DEPOSIT-AMT.
+           READ WITHDRW-AMT.
+      <p>*----------------------------------------------------------------*</p>
+            DISPLAY 'BANK BALANCE IS: ' BALANCE-IO.
+            DISPLAY 'DEPOSITED AMOUNT IS: ' DEPOSIT-I.
+            DISPLAY 'WITHDRAW AMOUNT IS: ' WITHDRW-I.
+      <p>*----------------------------------------------------------------*</p>
+             MOVE BAL-AMT  TO WS-BAL.
+             MOVE DEP-AMT  TO WS-DEP.
+             MOVE DRAW-AMT TO WS-DRAW.
+      <p>*----------------------------------------------------------------*</p>
+            DISPLAY 'WS-BAL  :' WS-BAL.
+            DISPLAY 'WS-DEP  :' WS-DEP.
+            DISPLAY 'WS-DRAW :' WS-DRAW.
+      <p>*----------------------------------------------------------------*</p>
+           COMPUTE-FILES.
+      <p>*----------------------------------------------------------------*</p>
+           IF WS-DEP IS NOT = ZEROES THEN
+               COMPUTE WS-NEWBAL = WS-BAL + WS-DEP
+               MOVE WS-NEWBAL   TO WS-BAL-AMT
+               MOVE WS-BAL-AMT  TO WS-BAL
+               DISPLAY 'AMOUNT DEPOSITED SUCCESSFULL!'
+           END-IF.
+      <p>*----------------------------------------------------------------*</p>
+           IF WS-DRAW IS NOT = ZEROES THEN
+               COMPUTE WS-NEWBAL = WS-BAL - WS-DRAW
+               MOVE WS-NEWBAL   TO WS-BAL-AMT
+               DISPLAY 'AMOUNT DEPOSITED SUCCESSFULL!'
+           END-IF.
+      <p>*----------------------------------------------------------------*</p>
+               DISPLAY 'NEW ACCOUNT BALANCE IS: ' WS-BAL-AMT.
+      <p>*----------------------------------------------------------------*</p>
+           WRITE-FILES.
+               IF WS-STATUS IS ZEROES THEN
+                   MOVE WS-BAL-AMT TO FINAL-AMT
+                   WRITE OUTFILE-O
+               END-IF.
+      <p>*----------------------------------------------------------------*</p>
+           CLOSE-FILES.
+           CLOSE BALANCE-AMT.
+           CLOSE DEPOSIT-AMT.
+           CLOSE WITHDRW-AMT.
+           CLOSE OUTPUT-AMT.
+
+</p>
+
+  </body>
+</html>
